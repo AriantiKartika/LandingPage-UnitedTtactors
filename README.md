@@ -1,14 +1,15 @@
 # 🌍 PT United Tractors Tbk — Landing Page Website
 
-![Screenshot Halaman Utama](./screenshot-homepage.png)
-> 🖼️ *Ganti gambar di atas dengan hasil tangkapan layar (screenshot) halaman websitemu.*
-
+![Screenshot Halaman Utama](./image.png)
 ---
 
 ## 📘 Deskripsi Proyek
 
 Website ini merupakan **landing page resmi fiktif PT United Tractors Tbk**, dirancang untuk menampilkan profil perusahaan, lini bisnis utama, dan informasi kontak dalam tampilan modern dan responsif berbasis **Tailwind CSS**.  
-Tujuan pembuatan halaman ini adalah untuk **menunjukkan citra profesional perusahaan industri alat berat** dengan pendekatan visual yang bersih, elegan, dan mudah diakses dari berbagai perangkat.
+Tujuan pembuatan halaman ini adalah untuk memenuhi Tugas Akhir Pemrograman Web judul 3,
+Nama: Arianti Kartika Dewi
+NPM: 2315061047
+Kelas: PPW-B
 
 ---
 
