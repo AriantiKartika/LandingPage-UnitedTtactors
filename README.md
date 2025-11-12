@@ -1,6 +1,6 @@
 # 🌍 PT United Tractors Tbk — Landing Page Website
 
-![Screenshot Halaman Utama](./image.png)
+
 ---
 
 ## 📘 Deskripsi Proyek
@@ -17,8 +17,11 @@ Kelas: PPW-B
 
 ### 🟡 **1. Navigasi Responsif**
 - Navbar tetap (fixed top) dengan logo dan menu interaktif.
+![navbar](./navbar.png)
 - Dropdown “Layanan & Produk” dengan animasi `fade-in-up`.
-- Menu mobile dengan tombol hamburger yang otomatis menyesuaikan layar kecil.
+![dropdown](./dropdown.png)
+- Menu mobile yang otomatis menyesuaikan layar kecil.
+![mobile](./mobile.png)
 
 ### ⚙️ **2. Hero Section (Halaman Utama)**
 - Latar belakang foto industri (`background-image`) dengan overlay gradasi hitam transparan.
@@ -26,31 +29,37 @@ Kelas: PPW-B
 - Tombol CTA:
   - **Jelajahi Solusi**
   - **Hubungi Kami**
+![hero section](./image.png)
 
 ### 🏗️ **3. Lini Bisnis (Fitur Utama)**
 Tiga kategori utama:
 - **Mesin Konstruksi**
 - **Kontraktor Penambangan**
 - **Energi & Konstruksi**
-
 Setiap kategori ditampilkan dalam *card* dengan efek hover interaktif dan ikon SVG.
+![lini bisnis](./bisnis.png)
 
 ### 🧱 **4. Detail Setiap Lini Bisnis**
 - Menampilkan gambar (`konstruksi.png`, `pertambangan.png`, `energi.png`)
 - Deskripsi lengkap per sektor dengan tata letak grid responsif (`lg:grid-cols-2`)
+![detail](./detail.png)
 
 ### 🏢 **5. Tentang Kami**
 - Bagian profil perusahaan dengan efek dekoratif (border kuning & pola titik).
 - Teks menjelaskan sejarah berdirinya perusahaan sejak 1972.
+![tentang](./tentang.png)
 
 ### ✉️ **6. Hubungi Kami**
 - Informasi kontak kantor pusat, UT Call, dan Instagram resmi.
 - Formulir kontak interaktif dengan animasi pesan sukses.
 - Efek blur dekoratif dengan lingkaran berwarna.
+![kontak](./kontak.png)
+![pesan](./pesan.png)
 
 ### ⚫ **7. Footer**
 - Empat kolom navigasi: *Perusahaan, Solusi, Bantuan, dan Profil*.
 - Hak cipta dan tautan kebijakan privasi.
+![footer](./footer.png)
 
 ---
 
@@ -75,5 +84,4 @@ project-folder/
 ├── konstruksi.png             # Gambar untuk section mesin konstruksi
 ├── pertambangan.png           # Gambar untuk section kontraktor tambang
 ├── energi.png                 # Gambar untuk section energi
-├── screenshot-homepage.png    # Screenshot tampilan web (untuk README)
 └── README.md                  # Dokumentasi proyek
