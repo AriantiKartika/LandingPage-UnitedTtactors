@@ -17,11 +17,11 @@ Kelas: PPW-B
 
 ### 🟡 **1. Navigasi Responsif**
 - Navbar tetap (fixed top) dengan logo dan menu interaktif.
-![navbar](./navbar.png)
+![navbar](./navbar.jpeg)
 - Dropdown “Layanan & Produk” dengan animasi `fade-in-up`.
-![dropdown](./dropdown.png)
+![dropdown](./dropdown.jpeg)
 - Menu mobile yang otomatis menyesuaikan layar kecil.
-![mobile](./mobile.png)
+![mobile](./mobile.jpeg)
 
 ### ⚙️ **2. Hero Section (Halaman Utama)**
 - Latar belakang foto industri (`background-image`) dengan overlay gradasi hitam transparan.
@@ -29,7 +29,7 @@ Kelas: PPW-B
 - Tombol CTA:
   - **Jelajahi Solusi**
   - **Hubungi Kami**
-![hero section](./image.png)
+![hero section](./image.jpeg)
 
 ### 🏗️ **3. Lini Bisnis (Fitur Utama)**
 Tiga kategori utama:
@@ -37,29 +37,29 @@ Tiga kategori utama:
 - **Kontraktor Penambangan**
 - **Energi & Konstruksi**
 Setiap kategori ditampilkan dalam *card* dengan efek hover interaktif dan ikon SVG.
-![lini bisnis](./bisnis.png)
+![lini bisnis](./bisnis.jpeg)
 
 ### 🧱 **4. Detail Setiap Lini Bisnis**
 - Menampilkan gambar (`konstruksi.png`, `pertambangan.png`, `energi.png`)
 - Deskripsi lengkap per sektor dengan tata letak grid responsif (`lg:grid-cols-2`)
-![detail](./detail.png)
+![detail](./detail.jpeg)
 
 ### 🏢 **5. Tentang Kami**
 - Bagian profil perusahaan dengan efek dekoratif (border kuning & pola titik).
 - Teks menjelaskan sejarah berdirinya perusahaan sejak 1972.
-![tentang](./tentang.png)
+![tentang](./tentang.jpeg)
 
 ### ✉️ **6. Hubungi Kami**
 - Informasi kontak kantor pusat, UT Call, dan Instagram resmi.
 - Formulir kontak interaktif dengan animasi pesan sukses.
 - Efek blur dekoratif dengan lingkaran berwarna.
-![kontak](./kontak.png)
-![pesan](./pesan.png)
+![kontak](./kontak.jpeg)
+![pesan](./pesan.jpeg)
 
 ### ⚫ **7. Footer**
 - Empat kolom navigasi: *Perusahaan, Solusi, Bantuan, dan Profil*.
 - Hak cipta dan tautan kebijakan privasi.
-![footer](./footer.png)
+![footer](./footer.jpeg)
 
 ---
 
