@@ -29,7 +29,7 @@ Kelas: PPW-B
 - Tombol CTA:
   - **Jelajahi Solusi**
   - **Hubungi Kami**
-![hero section](./image.jpeg)
+![hero section](./heroSection.png)
 
 ### 🏗️ **3. Lini Bisnis (Fitur Utama)**
 Tiga kategori utama:
