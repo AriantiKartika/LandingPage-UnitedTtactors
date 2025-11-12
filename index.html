@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT United Tractors Tbk - Moving Forward</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ut: {
+                            yellow: '#FFCC00',
+                            black: '#1A1A1A',
+                            dark: '#333333',
+                            gray: '#F4F4F4'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #FFCC00; }
+        ::-webkit-scrollbar-thumb:hover { background: #e6b800; }
+    </style>
+    
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl,
+    .max-w-2xl {
+        max-width: 100% !important;
+        padding-left: 5%;
+        padding-right: 5%;
+        box-sizing: border-box;
+    }
+
+    #home {
+        min-height: 100vh;
+    }
+
+    section {
+        width: 100%;
+    }
+</style>
+
+
+</head>
+<body class="bg-gray-50 text-ut-dark">
+
+    <nav class="bg-white shadow-lg fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-ut-black tracking-tighter flex items-center gap-2">
+                        <span>UNITED <span class="text-ut-yellow">TRACTORS</span></span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-ut-yellow font-medium transition text-sm uppercase tracking-wide">Beranda</a>
+                    
+                    <div class="relative group h-20 flex items-center">
+                        <button class="text-gray-700 group-hover:text-ut-yellow font-medium transition flex items-center text-sm uppercase tracking-wide focus:outline-none">
+                            Layanan & Produk
+                            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="absolute top-20 left-0 w-64 bg-white shadow-xl rounded-b-lg overflow-hidden hidden group-hover:block border-t-4 border-ut-yellow animate-fade-in-up">
+                            <a href="#construction" class="block px-6 py-3 text-gray-700 hover:bg-ut-gray hover:text-ut-yellow transition border-b border-gray-100">Mesin Konstruksi</a>
+                            <a href="#mining-contracting" class="block px-6 py-3 text-gray-700 hover:bg-ut-gray hover:text-ut-yellow transition border-b border-gray-100">Kontraktor Penambangan</a>
+                            <a href="#energy" class="block px-6 py-3 text-gray-700 hover:bg-ut-gray hover:text-ut-yellow transition">Energi & Konstruksi</a>
+                        </div>
+                    </div>
+
+                    <a href="#about" class="text-gray-700 hover:text-ut-yellow font-medium transition text-sm uppercase tracking-wide">Tentang Kami</a>
+                    <a href="#contact" class="bg-ut-yellow text-black px-6 py-2 rounded hover:bg-black hover:text-white font-bold transition text-sm uppercase tracking-wide shadow-md">Hubungi Kami</a>
+                </div>
+
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-ut-yellow focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 pt-4 pb-4 space-y-2">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ut-gray hover:text-ut-yellow">Beranda</a>
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ut-gray hover:text-ut-yellow">Layanan & Produk</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-ut-gray hover:text-ut-yellow">Tentang Kami</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-ut-yellow text-black mt-4 text-center">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative h-screen flex items-center justify-center bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto animate-fade-in-up">
+            <span class="inline-block py-1 px-3 border border-ut-yellow text-ut-yellow rounded-full text-sm font-bold mb-4 tracking-wider uppercase">Member of Astra</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+                MOVING <span class="text-ut-yellow">FORWARD</span><br>TOGETHER
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
+                Mitra terpercaya dalam solusi alat berat, pertambangan, dan energi untuk membangun masa depan Indonesia yang berkelanjutan.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#features" class="bg-ut-yellow text-black font-bold py-4 px-10 rounded shadow-lg hover:bg-white hover:text-ut-black transition duration-300 transform hover:-translate-y-1">
+                    Jelajahi Solusi
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white font-bold py-4 px-10 rounded hover:bg-white hover:text-black transition duration-300">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute -bottom-16 left-0 w-full z-20 px-4 hidden md:block">
+            <div class="max-w-6xl mx-auto bg-white shadow-2xl rounded-lg grid grid-cols-4 divide-x divide-gray-200 p-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-ut-black">50+</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wider mt-2">Tahun Pengalaman</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-ut-black">200+</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wider mt-2">Titik Layanan</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-ut-black">3.500+</p>
+                    <p class="text-gray-500 text-sm uppercase tracking-wider mt-2">Karyawan Ahli</p>
+                </div>
+                <div class="text-center flex flex-col justify-center items-center">
+                    <p class="text-ut-yellow font-bold text-lg">Astra Group</p>
+                    <p class="text-gray-400 text-xs mt-1">Subsidiary Company</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="pt-32 pb-10 bg-ut-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="max-w-2xl">
+                    <h4 class="text-ut-yellow font-bold uppercase tracking-widest mb-2">Lini Bisnis</h4>
+                    <h2 class="text-4xl font-bold text-ut-black">Solusi Terintegrasi</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group relative overflow-hidden flex flex-col">
+                    <div class="absolute top-0 right-0 bg-ut-yellow w-20 h-20 rounded-bl-full -mr-10 -mt-10 opacity-20 group-hover:opacity-100 transition"></div>
+                    <div class="w-14 h-14 bg-ut-black rounded-lg flex items-center justify-center mb-6 text-ut-yellow group-hover:bg-ut-yellow group-hover:text-black transition">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-ut-black">Mesin Konstruksi</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Distributor eksklusif merek kelas dunia seperti Komatsu, UD Trucks, Scania, Bomag, dan Tadano.</p>
+                    <a href="#construction" class="text-ut-yellow font-bold hover:text-black transition flex items-center text-sm mt-auto">PELAJARI LEBIH LANJUT <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group relative overflow-hidden flex flex-col">
+                     <div class="absolute top-0 right-0 bg-ut-yellow w-20 h-20 rounded-bl-full -mr-10 -mt-10 opacity-20 group-hover:opacity-100 transition"></div>
+                    <div class="w-14 h-14 bg-ut-black rounded-lg flex items-center justify-center mb-6 text-ut-yellow group-hover:bg-ut-yellow group-hover:text-black transition">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-ut-black">Kontraktor Tambang</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Layanan kontraktor penambangan batubara terintegrasi melalui PAMA dengan standar operasional tinggi.</p>
+                    <a href="#mining-contracting" class="text-ut-yellow font-bold hover:text-black transition flex items-center text-sm mt-auto">PELAJARI LEBIH LANJUT <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 group relative overflow-hidden flex flex-col">
+                     <div class="absolute top-0 right-0 bg-ut-yellow w-20 h-20 rounded-bl-full -mr-10 -mt-10 opacity-20 group-hover:opacity-100 transition"></div>
+                    <div class="w-14 h-14 bg-ut-black rounded-lg flex items-center justify-center mb-6 text-ut-yellow group-hover:bg-ut-yellow group-hover:text-black transition">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-ut-black">Energi & Konstruksi</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Pengembangan pembangkit listrik yang efisien dan ramah lingkungan serta jasa konstruksi terpercaya.</p>
+                    <a href="#energy" class="text-ut-yellow font-bold hover:text-black transition flex items-center text-sm mt-auto">PELAJARI LEBIH LANJUT <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white">
+        
+        <section id="construction" class="py-20 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <img src="konstruksi.png" alt="Mesin Konstruksi United Tractors" class="rounded-lg shadow-2xl w-full object-cover h-96 bg-gray-200">
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-1 bg-ut-yellow mr-4"></span>
+                            <span class="text-ut-yellow font-bold uppercase tracking-widest">Distributor Utama</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-ut-black mb-6">Mesin Konstruksi</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            United Tractors telah lama dikenal sebagai distributor alat berat terkemuka di Indonesia. Kami memegang keagenan tunggal untuk merek-merek kelas dunia yang menjadi standar industri.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-ut-yellow mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Komatsu:</strong> Ekskavator, bulldozer, dan dump truck untuk tambang & konstruksi.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-ut-yellow mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>UD Trucks & Scania:</strong> Truk heavy-duty dan bus premium.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-ut-yellow mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span class="text-gray-700"><strong>Bomag & Tadano:</strong> Alat pemadat tanah dan crane hidrolik.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mining-contracting" class="py-20 bg-gray-50 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-1 bg-ut-yellow mr-4"></span>
+                            <span class="text-ut-yellow font-bold uppercase tracking-widest">Layanan Terintegrasi</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-ut-black mb-6">Kontraktor Penambangan</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Melalui anak usaha kami, <strong>PT Pamapersada Nusantara (PAMA)</strong>, kami menyediakan jasa kontraktor pertambangan yang komprehensif dan terintegrasi kepada pemilik tambang batubara di Indonesia.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Layanan kami mencakup seluruh proses produksi pertambangan, mulai dari desain tambang, eksplorasi, pemindahan tanah (overburden removal), hingga pengangkutan batubara (coal hauling) dengan mengutamakan aspek keselamatan dan lingkungan.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-1/2">
+                        <img src="pertambangan.png" alt="Kontraktor Penambangan" class="rounded-lg shadow-2xl w-full object-cover h-96 bg-gray-200">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="energy" class="py-20 border-b border-gray-100 scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                        <img src="energi.png" alt="Energi Terbarukan United Tractors" class="rounded-lg shadow-2xl w-full object-cover h-96 bg-gray-200">
+                    </div>
+                    <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                        <div class="flex items-center mb-4">
+                            <span class="w-12 h-1 bg-ut-yellow mr-4"></span>
+                            <span class="text-ut-yellow font-bold uppercase tracking-widest">Masa Depan Berkelanjutan</span>
+                        </div>
+                        <h2 class="text-4xl font-bold text-ut-black mb-6">Energi & Industri Konstruksi</h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Sejalan dengan strategi transisi energi, kami mengembangkan bisnis energi baru terbarukan (EBT) melalui investasi pada pembangkit listrik tenaga air mini (PLTM) dan tenaga surya (Solar PV).
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Di sektor konstruksi, melalui <strong>PT Acset Indonusa Tbk (ACSET)</strong>, kami menyediakan jasa konstruksi spesialis fondasi, struktur, dan infrastruktur yang handal dan aman.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section id="about" class="py-20 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-24 h-24 opacity-20 bg-[radial-gradient(#1A1A1A_2px,transparent_2px)] [background-size:16px_16px]"></div>
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Tentang United Tractors" class="rounded-lg shadow-2xl z-10 relative grayscale hover:grayscale-0 transition duration-500">
+                        <div class="absolute -bottom-6 -right-6 w-2/3 h-full border-8 border-ut-yellow rounded-lg z-0 hidden md:block opacity-50"></div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <h4 class="text-ut-yellow font-bold tracking-widest uppercase mb-2">Profil Perusahaan</h4>
+                    <h2 class="text-4xl font-bold text-ut-black mb-6 leading-tight">Membangun Negeri <br>Sejak Tahun 1972</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        Sebagai anak perusahaan PT Astra International Tbk, kami telah tumbuh menjadi salah satu pemain utama di sektor alat berat, pertambangan, dan energi di Indonesia.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-ut-yellow mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700 font-medium">Jaringan Luas</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-ut-yellow mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            <span class="text-gray-700 font-medium">Produk Premium</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="inline-block bg-ut-black text-white px-8 py-3 rounded hover:bg-ut-yellow hover:text-black font-bold transition shadow-lg">Tentang Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-ut-black text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-ut-yellow opacity-5 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gray-700 opacity-10 rounded-full blur-3xl transform translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div>
+                    <h4 class="text-ut-yellow font-bold uppercase tracking-widest mb-2">Hubungi Kami</h4>
+                    <h2 class="text-4xl font-bold mb-6">Butuh Bantuan?</h2>
+                    <p class="text-gray-400 mb-8 leading-relaxed text-lg">
+                        Tim profesional kami siap memberikan solusi terbaik untuk kebutuhan bisnis Anda.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border-l-4 border-ut-yellow">
+                            <div class="text-ut-yellow mt-1 mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">Kantor Pusat</h4>
+                                <p class="text-gray-400 mt-1">Jl. Raya Bekasi Km 22,<br>Cakung, Jakarta Timur<br>Indonesia, 13910</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition border-l-4 border-ut-yellow">
+                            <div class="text-ut-yellow mt-1 mr-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-lg">UT Call 24/7</h4>
+                                <p class="text-gray-400 mt-1 font-mono text-xl text-ut-yellow">1 500 072</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.instagram.com/unitedtractorsofficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="flex items-center p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition group border-l-4 border-ut-yellow">
+                            <div class="text-ut-yellow mr-4">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.6.054 2.76.162 4.07 1.49 4.207 4.207.042.816.054 1.17.054 3.6v.077c0 2.43-.013 2.784-.054 3.6-.162 2.76-1.49 4.07-4.207 4.207-.816.042-1.17.054-3.6.054h-.077c-2.43 0-2.784-.013-3.6-.054-2.76-.162-4.07-1.49-4.207-4.207-.042-.816-.054-1.17-.054-3.6v-.077c0-2.43.013-2.784.054-3.6.162-2.76 1.49-4.07 4.207-4.207.816-.042 1.17-.054 3.6-.054h.077zm0 1.637c-2.321 0-2.618.01-3.413.05-.634.032-1.002.146-1.353.29-.356.15-.658.353-.94.635-.283.282-.486.584-.635.94-.144.35-.258.719-.29 1.353-.04 2.382-.05 2.679-.05 5.013s.01 2.631.05 5.013c.032.634.146 1.002.29 1.353.15.356.353.658.635.94.282.283.584.486.94.635.35.144.719.258 1.353.29 2.382.04 2.679.05 5.013.05s2.631-.01 5.013-.05c.634-.032 1.002-.146 1.353-.29.356-.15.658-.353.94-.635.283-.282.486-.584.635-.94.144-.35.258-.719.29-1.353.04-2.382.05-2.679.05-5.013-.05zM12.003 7.865c-2.28 0-4.135 1.854-4.135 4.135s1.855 4.135 4.135 4.135 4.135-1.854 4.135-4.135-1.855-4.135-4.135-4.135zM12.003 14.522c-1.468 0-2.657-1.189-2.657-2.657s1.189-2.657 2.657-2.657 2.657 1.189 2.657 2.657-1.189 2.657-2.657 2.657zm4.904-7.896a.987.987 0 00-.987-.987.987.987 0 00-.987.987.987.987 0 00.987.987c.544 0 .987-.443.987-.987z" clip-rule="evenodd" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white group-hover:text-ut-yellow transition">Instagram Resmi</h4>
+                                <p class="text-gray-400 group-hover:text-white transition text-sm">@unitedtractorsofficial</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 md:p-10 text-ut-dark shadow-2xl relative overflow-hidden border-t-8 border-ut-yellow">
+                    <div id="successMessage" class="hidden absolute top-0 left-0 w-full h-full bg-white/95 backdrop-blur-sm flex flex-col justify-center items-center z-20 animate-fade-in-up">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Pesan Terkirim!</h3>
+                        <p class="text-gray-600 text-center px-6 mb-8">Tim support kami akan segera menghubungi Anda.</p>
+                        <button type="button" onclick="resetForm()" class="bg-ut-black text-white font-bold py-3 px-8 rounded hover:bg-gray-800 transition shadow-lg">
+                            Kembali
+                        </button>
+                    </div>
+
+                    <form id="contactForm">
+                        <h3 class="text-2xl font-bold mb-6 text-ut-black">Kirim Pesan</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-gray-700">Nama Lengkap</label>
+                                <input required type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-ut-yellow focus:bg-white transition" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2 text-gray-700">Perusahaan</label>
+                                <input required type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-ut-yellow focus:bg-white transition" placeholder="Nama Perusahaan">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold mb-2 text-gray-700">Email Bisnis</label>
+                            <input required type="email" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-ut-yellow focus:bg-white transition" placeholder="email@perusahaan.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold mb-2 text-gray-700">Pesan Anda</label>
+                            <textarea required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:outline-none focus:border-ut-yellow focus:bg-white h-32 transition resize-none" placeholder="Ceritakan kebutuhan proyek Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-ut-yellow text-black font-bold py-4 rounded shadow-md hover:bg-yellow-400 transition transform active:scale-95 uppercase tracking-wider">
+                            Kirim Pesan Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#111] text-gray-400 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <span class="text-2xl font-bold text-white block mb-6">UNITED <span class="text-ut-yellow">TRACTORS</span></span>
+                    <p class="text-sm leading-relaxed mb-6 text-gray-500">
+                        Solusi terdepan di industri alat berat, penambangan, dan energi. Memberikan nilai tambah bagi pemangku kepentingan dan berkontribusi pada kemajuan bangsa.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-gray-800 pb-2 w-max">Perusahaan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Profil Korporasi</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Tata Kelola</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Hubungan Investor</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Keberlanjutan (ESG)</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Karir</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-gray-800 pb-2 w-max">Solusi Kami</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Mesin Konstruksi</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Kontraktor Penambangan</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Industri Konstruksi</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Energi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6 border-b border-gray-800 pb-2 w-max">Pusat Bantuan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Temukan Cabang</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Suku Cadang Resmi</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Layanan Purna Jual</a></li>
+                        <li><a href="#" class="hover:text-ut-yellow transition text-sm">Kontak Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <p>© 2023 PT United Tractors Tbk. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const successMsg = document.getElementById('successMessage');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+            
+            submitBtn.innerText = "SEDANG MENGIRIM...";
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+            setTimeout(() => {
+                successMsg.classList.remove('hidden');
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                form.reset();
+            }, 1500);
+        });
+
+        function resetForm() {
+            document.getElementById('successMessage').classList.add('hidden');
+        }
+
+        // Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.add('py-0');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.remove('py-0');
+            }
+        });
+    </script>
+</body>
+</html>
